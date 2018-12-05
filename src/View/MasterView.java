@@ -605,7 +605,11 @@ public class MasterView extends JFrame {
 	}
 
 	public void displaySearchedUsers() throws Exception {
-		
+		//delete all old tables
+		if(scrollPane != null) {
+			searchUserTab.remove(scrollPane);
+		}
+				
 			// 1. create a JTable to a generic SQL Query
 			tableUsers = new JTableview(SearchController.getAllUsers());
 			// 2. create JScrollPane with reference to the JTable
@@ -618,7 +622,13 @@ public class MasterView extends JFrame {
 	}
 	
 	public void displaySearchedBooksAll() throws Exception {
-			
+		
+		//delete all old tables
+		if(scrollPane2 != null) {
+			searchBooksTab.remove(scrollPane2);
+		}
+		
+		
 			// 1. create a JTable to a generic SQL Query
 			tablebooks = new JTableview(SearchController.getAllBooks());
 			// 2. create JScrollPane with reference to the JTable
@@ -631,6 +641,11 @@ public class MasterView extends JFrame {
 	}
 	
 	public void displaySearchedBooksSelected() throws Exception {
+		
+		//delete all old tables
+		if(scrollPane2 != null) {
+			searchBooksTab.remove(scrollPane2);
+		}
 		
 			// 1. create a JTable to a generic SQL Query
 			tablebooks = new JTableview(SearchController.getSelectedBooks());
