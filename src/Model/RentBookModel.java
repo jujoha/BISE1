@@ -75,7 +75,6 @@ public class RentBookModel
 					    } catch (Exception e) {}
 					    if(booksCount<2) {
 					    	booksCount++;
-					    	System.out.println("hier gehts noch");
 							String updateCountBooks = "UPDATE studienarbeit.student SET countBooks = "+ booksCount +" Where firstname = '"+ a.getVorname() +"' AND lastname = '"+ a.getNachname() +"';";
 							stmt.executeUpdate(updateCountBooks);
 							

@@ -632,11 +632,6 @@ public class MasterView extends JFrame {
 	
 	public void displaySearchedBooksSelected() throws Exception {
 		
-		if(tablebooks != null) {
-			tablebooks = null;
-			scrollPane2 = null;
-		}
-		
 			// 1. create a JTable to a generic SQL Query
 			tablebooks = new JTableview(SearchController.getSelectedBooks());
 			// 2. create JScrollPane with reference to the JTable

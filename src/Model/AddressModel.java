@@ -4,9 +4,6 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-
 import Database.DBConnection;
 
 public class AddressModel {
@@ -48,25 +45,6 @@ public class AddressModel {
 		conn.close();
 	}
 	
-//	public static int getNumberOfAddressesInDB() throws Exception {
-//		int number = 0;
-//		
-//		Connection conn = DBConnection.getConnection();
-//		Statement stmt = conn.createStatement();
-//		
-//		String sql = "SELECT COUNT(ID) as number FROM address";
-//		
-//		ResultSet rs = stmt.executeQuery(sql);
-//		while(rs.next()) {
-//			number = rs.getInt("number");
-//			System.out.println(number);
-//		}
-//		
-//		conn.close();
-//		
-//		
-//		return number;
-//	}
 	
 	public boolean isSame(AddressModel x) {
 		if(x.street.equals(this.street) && x.houseNr.equals(this.houseNr) && x.zipCode == this.zipCode && x.place.equals(this.place)) {
