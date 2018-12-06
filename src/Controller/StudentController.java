@@ -58,7 +58,7 @@ public class StudentController implements ActionListener {
 		// if no enum constant for Studiengruppe is available
 		catch (IllegalArgumentException ex) {
 			this.gui.setTextFieldStudiengruppe(null);
-			JOptionPane.showMessageDialog(new JFrame(), "Stellen Sie sicher das die Studiengruppe richtig sowie die Martrikelnummer eine Zahl ist. \\n Des weiteren darf die PLZ maximal aus 5 Zahlen bestehen. \n Außerdem sollen Sie die 'Adresse vorhanden' Checkbox nur aktivieren wenn sie alle ANgaben befüllen können.");
+			JOptionPane.showMessageDialog(new JFrame(), "Stellen Sie sicher das die Studiengruppe richtig sowie die Martrikelnummer eine Zahl ist. \\n Des weiteren darf die PLZ maximal aus 5 Zahlen bestehen. \n Außerdem sollen Sie die 'Adresse vorhanden' Checkbox nur aktivieren wenn sie alle Angaben befüllen können.");
 		} catch (NullPointerException ex) {
 			JOptionPane.showMessageDialog(new JFrame(), "NullPointerException");
 		} catch (Exception ex) {
